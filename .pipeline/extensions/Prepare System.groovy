@@ -6,7 +6,7 @@ void call(Map params) {
   echo "Current stage config: ${params.config}"
 
 cloudFoundryCreateService script: params.script
-sleep(time: 3, unit: "HOURS")
+sleep(time: 2, unit: "HOURS")
 cloudFoundryCreateServiceKey script: params.script
 
   echo "End - Extension for stage: ${params.stageName}"
