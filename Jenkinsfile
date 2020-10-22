@@ -1,3 +1,14 @@
 library('piper-lib-os')
 
-abapEnvironmentRunATCCheck script: this
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+               abapEnvironmentRunATCCheck script: this
+            }
+        }
+        
+    }
+}
+
