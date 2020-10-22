@@ -1,14 +1,3 @@
-library('piper-lib-os')
+@Library('piper-lib-os') _
 
-pipeline {
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-               abapEnvironmentRunATCCheck script: this
-            }
-        }
-        
-    }
-}
-
+abapEnvironmentPipeline script: this
